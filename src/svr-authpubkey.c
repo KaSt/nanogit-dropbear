@@ -160,7 +160,7 @@ void svr_auth_pubkey(int valid_user) {
 #endif
 	/* Return if plugin didn't authorise user */
         if (auth_failure) {
-            end_msg_userauth_failure(0, 0);
+            send_msg_userauth_failure(0, 0);
         }
 
         if (auth_failure) {
